@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:Features/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:Features/Customers.feature");
 formatter.feature({
-  "name": "Login",
+  "name": "Customers",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Successful Login with valid credentials",
+  "name": "Add new Customer",
   "description": "",
   "keyword": "Scenario"
 });
@@ -20,7 +20,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User opens URL \"https://admin-demo.nopcommerce.com/login\"",
+  "name": "User opens URL \"http://admin-demo.nopcommerce.com/login\"",
   "keyword": "When "
 });
 formatter.match({
@@ -50,31 +50,81 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Page Title should be \"Dashboard / nopCommerce administration\"",
+  "name": "User can view Dashboad",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "steps.page_Title_should_be(String)"
+  "location": "steps.user_can_view_Dashboad()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User Click on Log out Link",
+  "name": "User click on customers Menu",
   "keyword": "When "
 });
 formatter.match({
-  "location": "steps.user_Click_on_Log_out_Link()"
+  "location": "steps.user_click_on_customers_Menu()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Page Title should be \"Your store. Login\"",
+  "name": "click on customers Menu Item",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "steps.click_on_customers_Menu_Item()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click on Add new button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "steps.click_on_Add_new_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User can view Add new customer page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "steps.page_Title_should_be(String)"
+  "location": "steps.user_can_view_Add_new_customer_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User enter customer info",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "steps.user_enter_customer_info()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click on Save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "steps.click_on_Save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User can view confirmation message \"The new customer has been added successfully.\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "steps.user_can_view_confirmation_message(String)"
 });
 formatter.result({
   "status": "passed"
@@ -88,238 +138,5 @@ formatter.match({
 });
 formatter.result({
   "status": "passed"
-});
-formatter.scenarioOutline({
-  "name": "Login Data Driven",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "user launches the chrome Browser",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "User opens URL \"https://admin-demo.nopcommerce.com/login\"",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "User enters Email as \"\u003cEmail\u003e\" and Password as \"\u003cPassword\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click on Login",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Page Title should be \"Dashboard / nopCommerce administration\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "User Click on Log out Link",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "Page Title should be \"Your store. Login\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "close browser",
-  "keyword": "And "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "Email",
-        "Password"
-      ]
-    },
-    {
-      "cells": [
-        "admin@yourstore.com",
-        "admin"
-      ]
-    },
-    {
-      "cells": [
-        "admin@yourstore.com",
-        "admin123"
-      ]
-    }
-  ]
-});
-formatter.scenario({
-  "name": "Login Data Driven",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "user launches the chrome Browser",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "steps.user_launches_the_chrome_Browser()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User opens URL \"https://admin-demo.nopcommerce.com/login\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "steps.user_opens_URL(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User enters Email as \"admin@yourstore.com\" and Password as \"admin\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.user_enters_Email_as_and_Password_as(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Login",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.click_on_Login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Page Title should be \"Dashboard / nopCommerce administration\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.page_Title_should_be(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User Click on Log out Link",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "steps.user_Click_on_Log_out_Link()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Page Title should be \"Your store. Login\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.page_Title_should_be(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "close browser",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.close_browser()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Login Data Driven",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "user launches the chrome Browser",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "steps.user_launches_the_chrome_Browser()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User opens URL \"https://admin-demo.nopcommerce.com/login\"",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "steps.user_opens_URL(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "User enters Email as \"admin@yourstore.com\" and Password as \"admin123\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.user_enters_Email_as_and_Password_as(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click on Login",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.click_on_Login()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Page Title should be \"Dashboard / nopCommerce administration\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.page_Title_should_be(String)"
-});
-formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat stepDefinitions.steps.page_Title_should_be(steps.java:46)\r\n\tat ✽.Page Title should be \"Dashboard / nopCommerce administration\"(file:Features/login.feature:19)\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "User Click on Log out Link",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "steps.user_Click_on_Log_out_Link()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "Page Title should be \"Your store. Login\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "steps.page_Title_should_be(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "close browser",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "steps.close_browser()"
-});
-formatter.result({
-  "status": "skipped"
 });
 });
