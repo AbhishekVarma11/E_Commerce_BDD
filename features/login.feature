@@ -1,5 +1,6 @@
 Feature: Login
 
+@regression
 Scenario: Successful Login with valid credentials
 		Given user launches the chrome Browser
 		When User opens URL "https://admin-demo.nopcommerce.com/login"

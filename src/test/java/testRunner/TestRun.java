@@ -5,11 +5,12 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions
 (
-		features=".//Features//Customers.feature",
+		features=".//Features",
 		glue="stepDefinitions",
 		dryRun=false,
 		monochrome=true,
-		plugin={"pretty","html:test-output"}
+		plugin={"pretty","html:test-output"},
+		tags= {"@sanity"}
 		)
 public class TestRun {
 
