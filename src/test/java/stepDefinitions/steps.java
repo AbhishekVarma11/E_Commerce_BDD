@@ -89,7 +89,7 @@ public class steps extends BaseClass{
 		if(driver.getPageSource().contains("Login was unsuccessful."))
 		{	
 			Logger.warn("--Login failed---");
-			driver.close();
+			driver.quit();
 			Assert.assertTrue(false);
 		}
 		else {
@@ -110,7 +110,7 @@ public class steps extends BaseClass{
 	@Then("close browser")
 	public void close_browser() {
 		Logger.info("--closing browser---");
-		driver.close();
+		driver.quit();
 
 	}
 	
