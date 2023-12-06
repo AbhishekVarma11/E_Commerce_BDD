@@ -7,7 +7,7 @@ Background: Below steps are common for the every scenario
 	And Click on Login
 	Then User can view Dashboad
 	
-@regression
+
 Scenario: Add new Customer 
 	When User click on customers Menu 
 	And click on customers Menu Item 
