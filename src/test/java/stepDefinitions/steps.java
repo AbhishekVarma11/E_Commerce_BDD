@@ -6,7 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.de.Aber;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -221,6 +223,10 @@ Assert.assertEquals("Add a new customer / nopCommerce administration",addCust.ge
 		se=new SearchCustomer_By_Email(driver);
 		 boolean status=sn.searchCustomerByName("Virat Kohli");
 		 Assert.assertEquals(true,status);
+	}
+	@After
+	public void tearDown() {
+		driver.quit();
 	}
 
 

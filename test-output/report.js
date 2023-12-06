@@ -132,6 +132,9 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
 formatter.background({
   "name": "Below steps are common for the every scenario",
   "description": "",
@@ -268,6 +271,9 @@ formatter.match({
   "location": "steps.close_browser()"
 });
 formatter.result({
+  "status": "passed"
+});
+formatter.after({
   "status": "passed"
 });
 });

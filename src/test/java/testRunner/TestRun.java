@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 		dryRun=false,
 		monochrome=true,
 		plugin={"pretty","html:test-output"},
-		tags= {"@sanity"}
+		tags= {"@regression"}
 		)
 public class TestRun {
 
